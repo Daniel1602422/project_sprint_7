@@ -27,6 +27,7 @@ bar_chart = pd.DataFrame(car_model)
 bar_chart.reset_index(inplace=True)
 build_bar = st.checkbox('Click para construir un gráfico de barras.')
 if build_bar:
-    st.write('Creación de un gráfico de barras donde se muestra los modelos de automóviles con mayor precio promedio')
-    fig3 = px.bar(bar_chart, x='model', y='price')
+    st.write('Creación de un gráfico de barras donde se muestra los modelos de automóviles con mayor precio promedio.')
+    fig3 = px.bar(bar_chart, x='model', y='price',
+                  title='Top10: Modelos de automóviles con mayor precio promedio')
     st.plotly_chart(fig3, use_container_width=True)
